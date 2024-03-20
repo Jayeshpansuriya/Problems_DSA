@@ -25,6 +25,4 @@ Create a pull request to merge your changes into the main branch of this reposit
 About Coding Ninjas and TackUforward
 Coding Ninjas is a platform that provides courses and coding challenges to help individuals learn and practice coding skills.
 
-TackUforward is a community-driven platform that provides mentorship and guidance to individuals in various fields, including programming and technology
-# Coding-Ninja-tackUforward
-Coding Ninja + TackUforward Repository for storing solutions to Data Structures and Algorithms problems from Coding Ninjas, suggested by TackUforward. Solutions are implemented in Java, C, and C++.  Contribution Contributions are welcome! Fork the repository, add your solutions, and create a pull request.
+TackUforward is a community-driven platform that provides mentorship and guidance to individuals in various fields, including programming and technology.
