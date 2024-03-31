@@ -54,11 +54,16 @@ Constraints:
     public static int countDigits(int n){
         // Write your code here.
 int count=0;
+      //int reverseNum=0;
         while(n>0){
            int lastdigits=n%10;
            
             count=count+1;
              n=n/10;
+          //lets nuber is 4567
+//uper loop will gose like 7654 but for the print the number we have to print reverseNumber 
+          
+        //  reverseNum=(reverseNum*10)+lastdigits;
         }
         return count;
     }
