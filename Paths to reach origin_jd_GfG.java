@@ -26,7 +26,7 @@ Constraints:
 0 ≤ x, y ≤ 500
 */
 
-
+==================================================================================================================================
 class Solution
 {
     public static int ways(int n, int m)
@@ -50,3 +50,89 @@ class Solution
         return l+r;
     }
 }
+====================================================================================================================================
+    private static long moduloMultiplication(long a, long b, long mod) {
+
+		long res = 0;
+
+		a %= mod;
+
+		while (b > 0) {
+
+			if ((b & 1) != 0) {
+				res = (res + a) % mod;
+			}
+
+			a = (2 * a) % mod;
+
+			b >>= 1;
+		}
+		return res;
+	}
+
+	private static long x, y;
+
+	private static long gcdExtended(long a, long b) {
+
+		if (a == 0) {
+			x = 0;
+			y = 1;
+			return b;
+		}
+
+		long gcd = gcdExtended(b % a, a);
+	
+		long x1 = x;
+		
+		long y1 = y;
+
+		x = y1 - (b / a) * x1;
+		
+		y = x1;
+
+		return gcd;
+	}
+
+	private static long modInverse(long a, long m) {
+	
+		long g = gcdExtended(a, m);
+
+		if (g != 1)
+			return -1;
+
+		return (x % m + m) % m;
+	}
+
+	private static long modDivide(long a, long b, long m) {
+
+		a = a % m;
+		
+		long inv = modInverse(b, m);
+		
+		if (inv == -1) {
+			return 0;
+		}
+		else {
+			return (inv * a) % m;
+		}
+	}
+
+	private static long nCrModp(long n, long r, long p) {
+
+		if (r > n)
+			return 0;
+
+		if (r > n - r)
+			r = n - r;
+
+		long x = 1;
+
+		for (long i = 1L; i <= r; i++) {
+
+			x = moduloMultiplication(x, (n + 1L - i), p);
+
+			x = modDivide(x, i, p);
+		}
+
+		return x;
+	}
