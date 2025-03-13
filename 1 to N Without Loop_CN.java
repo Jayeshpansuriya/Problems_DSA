@@ -1,13 +1,7 @@
 /* 
 Problem statement
 You are given an integer ‘n’.
-
-
-
 Your task is to return an array containing integers from 1 to ‘n’ (in increasing order) without using loops.
-
-
-
 Example:
 Input: ‘n’ = 5
 
@@ -34,9 +28,6 @@ Constraints:
 
 Time Limit: 1-sec
 */
-
-
-====================================================================================================================================================
 ====================================================================================================================================================
   import java.util.Scanner;
 public class Solution {
